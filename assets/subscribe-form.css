@@ -1,0 +1,191 @@
+/* subscribe-form.css - 简约版本 */
+
+/* 基础变量 - 便于自定义 */
+:root {
+    --subscribe-primary: #3b82f6;
+    --subscribe-success: #10b981;
+    --subscribe-error: #ef4444;
+    --subscribe-text: #374151;
+    --subscribe-bg: #ffffff;
+    --subscribe-border: #e5e7eb;
+    --subscribe-radius: 8px;
+    --subscribe-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+/* 订阅组件容器 */
+.subscribe-widget {
+    background: var(--subscribe-bg);
+    border: 1px solid var(--subscribe-border);
+    border-radius: var(--subscribe-radius);
+    padding: 24px;
+    margin: 16px 0;
+    box-shadow: var(--subscribe-shadow);
+}
+
+/* 标题区域 */
+.subscribe-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.subscribe-header h3 {
+    margin: 0 0 8px 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--subscribe-text);
+}
+
+.subscribe-header p {
+    margin: 0;
+    font-size: 14px;
+    color: #6b7280;
+}
+
+/* 表单样式 */
+.subscribe-form {
+    /* 基础表单容器 */
+}
+
+.subscribe-form .form-group {
+    margin-bottom: 12px;
+}
+
+.subscribe-form input {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid var(--subscribe-border);
+    border-radius: var(--subscribe-radius);
+    font-size: 14px;
+    color: var(--subscribe-text);
+    background: var(--subscribe-bg);
+    box-sizing: border-box;
+    transition: border-color 0.2s;
+}
+
+.subscribe-form input:focus {
+    outline: none;
+    border-color: var(--subscribe-primary);
+}
+
+.subscribe-form button {
+    width: 100%;
+    padding: 10px 12px;
+    border: none;
+    border-radius: var(--subscribe-radius);
+    background: var(--subscribe-primary);
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.subscribe-form button:hover {
+    background: #2563eb;
+}
+
+.subscribe-form button:disabled {
+    background: #9ca3af;
+    cursor: not-allowed;
+}
+
+/* 底部文字 */
+.subscribe-footer {
+    text-align: center;
+    margin-top: 12px;
+}
+
+.subscribe-footer small {
+    font-size: 12px;
+    color: #6b7280;
+}
+
+/* 消息提示 */
+.subscribe-message {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 12px 16px;
+    border-radius: var(--subscribe-radius);
+    font-size: 14px;
+    font-weight: 500;
+    z-index: 9999;
+    box-shadow: var(--subscribe-shadow);
+}
+
+.subscribe-message.success {
+    background: var(--subscribe-success);
+    color: white;
+}
+
+.subscribe-message.error {
+    background: var(--subscribe-error);
+    color: white;
+}
+
+.subscribe-message.info {
+    background: var(--subscribe-primary);
+    color: white;
+}
+
+/* 模态框 */
+.subscribe-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.subscribe-modal-content {
+    background: var(--subscribe-bg);
+    border-radius: var(--subscribe-radius);
+    max-width: 400px;
+    width: 100%;
+    position: relative;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.subscribe-modal-close {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: none;
+    border: none;
+    font-size: 18px;
+    color: #6b7280;
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.subscribe-modal-close:hover {
+    color: var(--subscribe-text);
+}
+
+/* 响应式 */
+@media (max-width: 768px) {
+    .subscribe-widget {
+        margin: 12px;
+        padding: 20px;
+    }
+    
+    .subscribe-message {
+        top: 10px;
+        right: 10px;
+        left: 10px;
+    }
+    
+    .subscribe-modal {
+        padding: 12px;
+    }
+}
