@@ -354,8 +354,8 @@ A:
 
 ## 📞 支持
 
-- **问题反馈**: [GitHub Issues](https://github.com/your-repo/issues)
-- **功能建议**: [GitHub Discussions](https://github.com/your-repo/discussions)
+- **问题反馈**: [GitHub Issues](https://github.com/TGU-HansJack/issues)
+- **功能建议**: [GitHub Discussions](https://github.com/TGU-HansJack/discussions)
 - **文档问题**: 欢迎提交 PR 改进文档
 
 ---
